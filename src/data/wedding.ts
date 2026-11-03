@@ -78,12 +78,12 @@ export const wedding = {
     },
     {
       id: "mehndi",
-      title: "Mehndi",
+      title: "Mehndi Rasam",
       weekday: "Friday",
       date: "20 November 2026",
       time: "6:00 PM",
       summary:
-        "Henna blooms across the bride's hands, surrounded by marigolds, music, and joy.",
+        "Ladke ki mehndi — henna is applied on the groom's hand, among marigolds, music, and joy.",
     },
     {
       id: "haldi",
@@ -140,7 +140,7 @@ export function shareMessage(url: string) {
     "You are cordially invited to our wedding celebrations.",
     "",
     "Tilak · 16 November 2026 · 8:00 PM",
-    "Mehndi · 20 November 2026 · 6:00 PM",
+    "Mehndi Rasam · 20 November 2026 · 6:00 PM",
     "Haldi & Matkod · 21 November 2026 · 6:00 AM",
     "Vivah · 21 November 2026 · Baraat 2:00 PM",
     "",

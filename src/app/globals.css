@@ -555,6 +555,7 @@ button {
   .fall-b,
   .spark,
   .kenburns,
+  .mehndi-drift,
   .sway,
   .havan-flame,
   .tick-num,
@@ -679,6 +680,39 @@ button {
 
 .visible-date.is-compact .visible-date-when {
   font-size: 1.02rem;
+}
+
+.mehndi-section {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(244, 186, 48, 0.28), transparent 58%),
+    #f6efe6;
+}
+
+.mehndi-stage {
+  position: relative;
+  margin: 0.95rem auto 0;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  max-width: 22rem;
+  overflow: hidden;
+  border: 3px solid #f0d48a;
+  border-radius: 1.15rem;
+  background: #e7b23a;
+  box-shadow: 0 16px 34px rgba(122, 74, 8, 0.16);
+}
+
+.mehndi-drift {
+  animation: mehndi-drift 8.5s ease-in-out infinite alternate;
+  transform-origin: 46% 62%;
+}
+
+@keyframes mehndi-drift {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.1) translate3d(-1.6%, -1.2%, 0);
+  }
 }
 
 .festivity-art {

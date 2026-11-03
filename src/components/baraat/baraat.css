@@ -1,0 +1,561 @@
+.baraat-journey {
+  background: #14040c;
+  color: #f8f1e6;
+}
+
+.baraat-scene {
+  position: relative;
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding: calc(4.2rem + env(safe-area-inset-top)) 1.1rem calc(1.4rem + env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at 50% 18%, rgba(212, 175, 101, 0.16), transparent 32%),
+    linear-gradient(180deg, #1a0610 0%, #3a1020 58%, #14060c 100%);
+}
+
+.baraat-sky {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.baraat-moon {
+  position: absolute;
+  top: 28%;
+  right: 14%;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 35%, #fff8e4, #f0d592 62%, #c9a15a);
+  box-shadow: 0 0 28px rgba(240, 213, 146, 0.55);
+}
+
+.baraat-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 999px;
+  background: #fff8ee;
+  opacity: 0.75;
+  animation: star-twinkle 2.8s ease-in-out infinite;
+}
+
+.baraat-copy {
+  position: relative;
+  z-index: 3;
+  margin-bottom: auto;
+  padding-inline: 2.2rem;
+  text-align: center;
+}
+
+.baraat-kicker {
+  font-family: var(--font-display), serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #f0d592;
+}
+
+.baraat-title,
+.baraat-hindi {
+  margin-top: 0.35rem;
+  text-wrap: balance;
+}
+
+.baraat-title {
+  font-family: var(--font-script), cursive;
+  font-size: clamp(2.4rem, 10vw, 3.2rem);
+  line-height: 1;
+  color: #fff6dd;
+}
+
+.baraat-hindi {
+  font-family: var(--font-devanagari), "Nirmala UI", sans-serif;
+  font-size: clamp(1.35rem, 5.4vw, 1.75rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #fff6dd;
+}
+
+.baraat-hindi span {
+  display: block;
+}
+
+.baraat-hindi-sub {
+  margin-top: 0.35rem;
+  font-size: 1.25rem;
+  color: #f0d592;
+}
+
+.gate-wrap {
+  position: relative;
+  z-index: 2;
+  margin-top: 0.5rem;
+}
+
+.baraat-gate {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.board-text {
+  font-family: var(--font-display), serif;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  fill: #f0d592;
+}
+
+.village-board {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: board-glow 2.4s ease-in-out infinite;
+}
+
+.toran-bloom {
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: toran-sway 2.6s ease-in-out infinite;
+}
+
+.lamp-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.2rem 0.4rem 0;
+}
+
+.lamp {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: #ffd27a;
+  box-shadow: 0 0 10px #ffb347;
+  animation: star-twinkle 1.6s ease-in-out infinite;
+}
+
+.lamp:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+
+.hut-row {
+  position: absolute;
+  right: 0;
+  bottom: 34%;
+  left: 0;
+  z-index: 0;
+  height: 16%;
+}
+
+.hut {
+  position: absolute;
+  bottom: 0;
+  width: 18%;
+  height: 72%;
+  border-radius: 2px 2px 0 0;
+  background: #2a1018;
+}
+
+.hut::before {
+  content: "";
+  position: absolute;
+  top: -36%;
+  right: -12%;
+  left: -12%;
+  height: 48%;
+  background: #3d1824;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.hut-a { left: 4%; }
+.hut-b { left: 38%; height: 96%; }
+.hut-c { right: 6%; width: 22%; }
+
+.procession::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  height: 22%;
+  background: linear-gradient(180deg, transparent, rgba(42, 16, 18, 0.72) 42%, #1a0a10);
+  pointer-events: none;
+}
+
+.parade {
+  position: absolute;
+  right: 0;
+  bottom: 4%;
+  left: 0;
+  z-index: 2;
+  height: 52%;
+}
+
+.baraat-scene.is-live .parade {
+  animation: parade 16s linear infinite;
+}
+
+.parade-svg,
+.dance-stage {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dance-stage {
+  position: relative;
+  z-index: 2;
+  height: 48%;
+}
+
+.h-leg,
+.groom-bob,
+.dancer,
+.d-arm,
+.d-leg,
+.dhol-arm,
+.sehra {
+  transform-box: fill-box;
+  transform-origin: center top;
+}
+
+.baraat-scene.is-live .h-leg-a,
+.baraat-scene.is-live .h-leg-c {
+  animation: horse-step 0.55s ease-in-out infinite;
+}
+
+.baraat-scene.is-live .h-leg-b,
+.baraat-scene.is-live .h-leg-d {
+  animation: horse-step 0.55s ease-in-out infinite reverse;
+}
+
+.baraat-scene.is-live .groom-bob {
+  transform-origin: center bottom;
+  animation: groom-bob 0.55s ease-in-out infinite;
+}
+
+.baraat-scene.is-live .sehra {
+  transform-origin: top center;
+  animation: sehra-sway 1.4s ease-in-out infinite;
+}
+
+.sehra {
+  fill: none;
+  stroke: #f0d592;
+  stroke-width: 1.2;
+}
+
+.baraat-scene.is-live .dancer {
+  transform-origin: center bottom;
+  animation: dance-step 0.72s ease-in-out infinite;
+}
+
+.baraat-scene.is-live .d-arm-l {
+  animation: arm-up 0.72s ease-in-out infinite alternate;
+}
+
+.baraat-scene.is-live .d-arm-r {
+  animation: arm-up 0.72s ease-in-out infinite alternate-reverse;
+}
+
+.baraat-scene.is-live .dhol-arm-l,
+.baraat-scene.is-live .dhol-arm-r {
+  animation: dhol-hit 0.42s ease-in-out infinite;
+}
+
+.baraat-scene.is-live .dhol-arm-r {
+  animation-delay: 0.21s;
+}
+
+.dj-lights,
+.petal-field,
+.confetti {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.dj-beam {
+  position: absolute;
+  top: -10%;
+  width: 34%;
+  height: 78%;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  transform-origin: top center;
+}
+
+.beam-a {
+  left: 6%;
+  background: linear-gradient(to bottom, rgba(255, 122, 24, 0.75), transparent 72%);
+}
+
+.beam-b {
+  left: 34%;
+  background: linear-gradient(to bottom, rgba(124, 58, 237, 0.6), transparent 72%);
+}
+
+.beam-c {
+  right: 4%;
+  background: linear-gradient(to bottom, rgba(56, 189, 248, 0.55), transparent 72%);
+}
+
+.baraat-scene.is-live .beam-a {
+  animation: sweep 3.4s ease-in-out infinite alternate;
+}
+
+.baraat-scene.is-live .beam-b {
+  animation: sweep 2.6s ease-in-out infinite alternate-reverse;
+}
+
+.baraat-scene.is-live .beam-c {
+  animation: sweep 3s ease-in-out infinite alternate;
+}
+
+.petal,
+.confetti-bit {
+  position: absolute;
+  top: -8%;
+  width: 0.45rem;
+  height: 0.7rem;
+  border-radius: 70% 10% 70% 10%;
+  background: #e39b2b;
+}
+
+.baraat-scene.is-live .petal,
+.baraat-scene.is-live .confetti-bit {
+  animation: petal-fall 7s linear infinite;
+}
+
+.petal-0, .bit-0 { left: 6%; animation-delay: 0s; }
+.petal-1, .bit-1 { left: 18%; animation-delay: 1.1s; background: #f2c14e; }
+.petal-2, .bit-2 { left: 30%; animation-delay: 2.2s; background: #c4322a; }
+.petal-3, .bit-3 { left: 44%; animation-delay: 0.6s; }
+.petal-4, .bit-4 { left: 56%; animation-delay: 1.8s; background: #fff6dd; }
+.petal-5, .bit-5 { left: 68%; animation-delay: 2.8s; }
+.petal-6, .bit-6 { left: 80%; animation-delay: 0.9s; background: #f2c14e; }
+.petal-7, .bit-7 { left: 90%; animation-delay: 2s; background: #c4322a; }
+.bit-8 { left: 24%; animation-delay: 3.2s; background: #7c3aed; }
+.bit-9 { left: 74%; animation-delay: 1.4s; background: #38bdf8; }
+
+.fw {
+  position: absolute;
+  z-index: 2;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  opacity: 0;
+}
+
+.fw-a { top: 22%; left: 22%; }
+.fw-b { top: 16%; left: 68%; }
+.fw-c { top: 30%; left: 48%; }
+.fw-d { top: 18%; right: 16%; }
+.fw-arrive { top: 18%; left: 20%; }
+.fw-arrive-b { top: 24%; right: 18%; }
+
+.baraat-scene.is-live .fw {
+  animation: fw-pop 2.8s ease-out infinite;
+}
+
+.baraat-scene.is-live .fw-b { animation-delay: 0.7s; }
+.baraat-scene.is-live .fw-c { animation-delay: 1.4s; }
+.baraat-scene.is-live .fw-d { animation-delay: 1.9s; }
+.baraat-scene.is-live .fw-arrive-b { animation-delay: 1s; }
+
+.rocket,
+.rocket-b {
+  position: absolute;
+  bottom: 28%;
+  left: 30%;
+  z-index: 2;
+  width: 3px;
+  height: 18px;
+  border-radius: 999px;
+  background: linear-gradient(#fff6dd, transparent);
+  opacity: 0;
+}
+
+.rocket-b { left: 64%; }
+
+.baraat-scene.is-live .rocket {
+  animation: rocket-up 2.8s ease-in infinite;
+}
+
+.baraat-scene.is-live .rocket-b {
+  animation: rocket-up 2.8s ease-in 1.3s infinite;
+}
+
+.fireworks-scene .ground-shot,
+.fireworks-scene .drone-view {
+  position: absolute;
+  inset: 0;
+}
+
+.fireworks-scene .ground-shot {
+  z-index: 1;
+}
+
+.drone-view {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transform: scale(1.28);
+}
+
+.baraat-scene.is-live .ground-shot {
+  animation: ground-out 1.1s ease 4.4s forwards;
+}
+
+.baraat-scene.is-live .drone-view {
+  animation: drone-in 2.2s ease 3.4s forwards;
+}
+
+.drone-map {
+  width: 100%;
+  height: 70%;
+}
+
+.drone-label {
+  padding: 0 1rem 1.4rem;
+  text-align: center;
+  font-family: var(--font-display), serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f0d592;
+}
+
+.baraat-scene.is-live .aerial-parade {
+  animation: aerial-glide 8s linear infinite;
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+@keyframes board-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(240, 213, 146, 0)); }
+  50% { filter: drop-shadow(0 0 8px rgba(240, 213, 146, 0.85)); }
+}
+
+@keyframes toran-sway {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes parade {
+  from { transform: translate3d(-105%, 0, 0); }
+  to { transform: translate3d(105%, 0, 0); }
+}
+
+@keyframes horse-step {
+  0%, 100% { transform: rotate(16deg); }
+  50% { transform: rotate(-18deg); }
+}
+
+@keyframes groom-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes sehra-sway {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes dance-step {
+  0%, 100% { transform: translateY(0) rotate(-6deg); }
+  50% { transform: translateY(-10px) rotate(6deg); }
+}
+
+@keyframes arm-up {
+  from { transform: rotate(-28deg); }
+  to { transform: rotate(34deg); }
+}
+
+@keyframes dhol-hit {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-22deg); }
+}
+
+@keyframes sweep {
+  from { transform: rotate(-16deg); }
+  to { transform: rotate(18deg); }
+}
+
+@keyframes petal-fall {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); opacity: 0; }
+  12% { opacity: 0.95; }
+  100% { transform: translate3d(18px, 110vh, 0) rotate(200deg); opacity: 0.15; }
+}
+
+@keyframes fw-pop {
+  0% { opacity: 0; transform: scale(0.2); box-shadow: 0 0 0 0 transparent; }
+  12% { opacity: 1; }
+  38% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow:
+      0 -72px 0 0 #fff6dd,
+      52px -52px 0 0 #ff7a18,
+      74px 0 0 0 #f0d592,
+      52px 52px 0 0 #fff,
+      0 70px 0 0 #e39b2b,
+      -52px 52px 0 0 #ffd27a,
+      -74px 0 0 0 #f2c14e,
+      -52px -52px 0 0 #fff6dd,
+      0 -34px 0 2px #fff,
+      26px 0 0 2px #ff7a18,
+      0 26px 0 2px #f0d592,
+      -26px 0 0 2px #fff6dd;
+  }
+  100% { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes rocket-up {
+  0% { opacity: 0; transform: translateY(40px); }
+  20% { opacity: 1; }
+  55% { opacity: 0; transform: translateY(-90px); }
+  100% { opacity: 0; }
+}
+
+@keyframes ground-out {
+  to { opacity: 0; }
+}
+
+@keyframes drone-in {
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes aerial-glide {
+  from { transform: translateX(-8%); }
+  to { transform: translateX(8%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .baraat-journey *,
+  .baraat-journey *::before,
+  .baraat-journey *::after {
+    animation: none !important;
+  }
+
+  .drone-view {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .fireworks-scene .ground-shot {
+    opacity: 0.35 !important;
+  }
+}

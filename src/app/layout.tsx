@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Cormorant_Garamond, Great_Vibes } from "next/font/google";
+import { Cinzel, Cormorant_Garamond, Great_Vibes, Noto_Sans_Devanagari } from "next/font/google";
 import "./globals.css";
 
 const cinzel = Cinzel({
@@ -19,6 +19,12 @@ const script = Great_Vibes({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-great-vibes",
+});
+
+const devanagari = Noto_Sans_Devanagari({
+  subsets: ["devanagari"],
+  weight: ["500", "700"],
+  variable: "--font-devanagari",
 });
 
 export const metadata: Metadata = {
@@ -43,7 +49,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${cinzel.variable} ${cormorant.variable} ${script.variable} scroll-lock antialiased`}
+      className={`${cinzel.variable} ${cormorant.variable} ${script.variable} ${devanagari.variable} scroll-lock antialiased`}
     >
       <body className="bg-[#f6efe6] text-[#3c241c]">
         <noscript>

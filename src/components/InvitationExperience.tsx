@@ -8,6 +8,7 @@ import { CoupleSection } from "./CoupleSection";
 import { Countdown } from "./Countdown";
 import { EventTimeline } from "./EventTimeline";
 import { FamilySection } from "./FamilySection";
+import { BaraatJourney } from "./baraat/BaraatJourney";
 import { HaldiSection } from "./HaldiSection";
 import { DateSection, HeritageIntro } from "./Heritage";
 import { InvitationHero } from "./InvitationHero";
@@ -111,6 +112,7 @@ function InvitationBody() {
         <TilakSection />
         <MehndiSection />
         <HaldiSection />
+        <BaraatJourney />
         <WeddingSection />
         <FamilySection />
         <VenueSection />

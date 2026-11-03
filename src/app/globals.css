@@ -738,6 +738,19 @@ button {
   box-shadow: 0 16px 34px rgba(122, 74, 8, 0.16);
 }
 
+.vivah-stage {
+  position: relative;
+  margin: 0.95rem auto 0;
+  aspect-ratio: 1024 / 682;
+  width: 100%;
+  max-width: 22rem;
+  overflow: hidden;
+  border: 3px solid #e7c3c6;
+  border-radius: 1.15rem;
+  background: #f6efe6;
+  box-shadow: 0 16px 34px rgba(110, 24, 48, 0.12);
+}
+
 .haldi-sign {
   font-family: var(--font-script), cursive;
   font-size: 24px;

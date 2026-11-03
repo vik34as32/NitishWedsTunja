@@ -8,8 +8,8 @@ import { CoupleSection } from "./CoupleSection";
 import { Countdown } from "./Countdown";
 import { EventTimeline } from "./EventTimeline";
 import { FamilySection } from "./FamilySection";
-import { FloatingPetals } from "./FloatingPetals";
 import { HaldiSection } from "./HaldiSection";
+import { DateSection, HeritageIntro } from "./Heritage";
 import { InvitationHero } from "./InvitationHero";
 import { MehndiSection } from "./MehndiSection";
 import { MobileOnly } from "./MobileOnly";
@@ -99,20 +99,19 @@ function InvitationBody() {
           </motion.div>
         ) : null}
       </AnimatePresence>
-      {opened ? (
-        <div className="pointer-events-none fixed inset-0 z-20 overflow-hidden">
-          <FloatingPetals count={8} />
-        </div>
-      ) : null}
-      <main inert={!opened}>
+      <main className="heritage-root" inert={!opened}>
         <InvitationHero />
+        <DateSection />
         <CoupleSection />
         <Countdown />
+        <EventTimeline />
+        <section className="heritage-section pb-0">
+          <HeritageIntro kicker="The festivities" title="Days filled with joy" />
+        </section>
         <TilakSection />
         <MehndiSection />
         <HaldiSection />
         <WeddingSection />
-        <EventTimeline />
         <FamilySection />
         <VenueSection />
         <ThankYouSection />

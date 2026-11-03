@@ -1,13 +1,11 @@
 "use client";
 
-import { assets, eventById, wedding } from "@/data/wedding";
+import { eventById, wedding } from "@/data/wedding";
 import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { GoldenParticles } from "./GoldenParticles";
+import { FestivitySection } from "./Heritage";
 import { VarmalaScene } from "./illustrations";
-import { Reveal } from "./Reveal";
-import { Scene } from "./Scene";
 
 export function WeddingSection() {
   const event = eventById("vivah");
@@ -62,35 +60,17 @@ export function WeddingSection() {
   }, [inView, reduce]);
 
   return (
-    <Scene
-      image={assets.mandapBackdrop}
+    <FestivitySection
       label="Grand wedding ceremony"
-      zoom
-      overlay="bg-gradient-to-b from-maroon/45 via-[#4a0810]/28 to-[#2a060c]/84"
-      fx={<GoldenParticles count={10} />}
-    >
-      <div ref={artRef} className="mx-auto h-[42vh] min-h-[240px] max-h-[360px] w-full">
-        {wedding.visual.illustratedScenes ? <VarmalaScene /> : null}
-      </div>
-      <div className="mx-auto mt-2 w-full max-w-sm text-center">
-        <Reveal>
-          <p className="font-display text-[0.68rem] tracking-[0.38em] text-gold">
-            {event.weekday.toUpperCase()}
-          </p>
-          <h2 className="mt-1 font-script text-[3.4rem] leading-none text-gold-soft lift">
-            Grand Wedding
-          </h2>
-          <p className="mt-3 font-serif text-xl italic text-cream">{event.date}</p>
-          <p className="mt-1 font-display text-[0.72rem] tracking-[0.22em] text-gold">
-            BARAAT PROCESSION · 2:00 PM
-          </p>
-        </Reveal>
-        <Reveal delay={1.05}>
-          <p className="mt-5 font-script text-[2.7rem] leading-tight text-gold-soft">
-            Forever Begins Together
-          </p>
-        </Reveal>
-      </div>
-    </Scene>
+      title="Vivah"
+      date={event.date}
+      when={`${event.weekday} · ${event.time}`}
+      summary={event.summary}
+      art={
+        <div ref={artRef} className="h-full">
+          {wedding.visual.illustratedScenes ? <VarmalaScene /> : null}
+        </div>
+      }
+    />
   );
 }

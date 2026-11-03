@@ -36,7 +36,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#720D18",
+  themeColor: "#4c1220",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -45,7 +45,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${cinzel.variable} ${cormorant.variable} ${script.variable} scroll-lock antialiased`}
     >
-      <body className="bg-maroon text-cream">
+      <body className="bg-[#f6efe6] text-[#3c241c]">
         <noscript>
           <style>{`html,body{height:auto !important;overflow:auto !important}.boot-overlay,.welcome-overlay{display:none !important}.await-reveal,[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
         </noscript>

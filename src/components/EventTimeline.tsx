@@ -1,54 +1,42 @@
 "use client";
 
-import { assets, wedding, type CeremonyId } from "@/data/wedding";
+import { splitDate, wedding } from "@/data/wedding";
 import { motion } from "framer-motion";
-import { Flower2, Heart, Sparkles, Sun, type LucideIcon } from "lucide-react";
-import { Reveal } from "./Reveal";
-import { Scene } from "./Scene";
-
-const icons: Record<CeremonyId, LucideIcon> = {
-  tilak: Sparkles,
-  mehndi: Flower2,
-  haldi: Sun,
-  vivah: Heart,
-};
+import { FloralGarland, HeritageIntro } from "./Heritage";
 
 export function EventTimeline() {
   return (
-    <Scene
-      image={assets.palaceBackdrop}
-      label="Wedding itinerary"
-      overlay="bg-gradient-to-b from-[#2a060c]/88 via-[#720d18]/80 to-[#2a060c]/92"
-    >
-      <Reveal>
-        <p className="text-center font-display text-[0.68rem] tracking-[0.38em] text-gold">
-          AUSPICIOUS MOMENTS
-        </p>
-        <h2 className="mt-2 text-center font-script text-5xl text-gold-soft">Wedding Itinerary</h2>
-      </Reveal>
-      <ol className="relative mt-8 ml-6 space-y-7 border-l border-gold/70 py-2 pl-8">
+    <section aria-label="Wedding itinerary" className="heritage-section">
+      <HeritageIntro kicker="The celebration" title="Our wedding days" />
+      <ol className="celebration-list">
         {wedding.events.map((event, index) => {
-          const Icon = icons[event.id];
+          const date = splitDate(event.date);
           return (
             <motion.li
               key={event.id}
-              className="relative"
-              initial={{ opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.7, delay: index * 0.08 }}
+              className="celebration-item"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.7 }}
+              transition={{ duration: 0.55, delay: index * 0.06 }}
             >
-              <span className="absolute top-0 -left-8 grid h-10 w-10 -translate-x-1/2 place-items-center rounded-full border border-gold bg-[#4a0810] text-gold-soft">
-                <Icon size={16} strokeWidth={1.6} aria-hidden />
-              </span>
-              <p className="font-display text-lg text-cream">{event.title}</p>
-              <p className="font-serif text-lg italic text-gold-soft">
-                {event.date} · {event.time}
-              </p>
+              <div className="pr-1 text-right">
+                <p className="font-serif text-[1.35rem] leading-none font-semibold text-[#7a1830]">
+                  {date.day} {date.shortMonth}
+                </p>
+                <p className="mt-1 font-serif text-[0.95rem] leading-tight text-[#5c4034]">{event.time}</p>
+              </div>
+              <div>
+                <p className="font-serif text-[1.45rem] leading-tight font-semibold text-[#2a1612]">
+                  {event.title}
+                </p>
+                <p className="font-serif text-[1.05rem] text-[#6b5346] italic">{event.weekday}</p>
+              </div>
             </motion.li>
           );
         })}
       </ol>
-    </Scene>
+      <FloralGarland className="mx-auto mt-3 h-9 w-full max-w-xs" />
+    </section>
   );
 }

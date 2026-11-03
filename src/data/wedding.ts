@@ -27,6 +27,9 @@ export const wedding = {
   /** Baraat hour, India Standard Time. The countdown ticks toward this moment. */
   dateTime: "2026-11-21T14:00:00+05:30",
   weddingDay: "Saturday, 21 November 2026",
+  /** Large, high-contrast date line used on the invitation card. */
+  dateLine: "21 November 2026",
+  dateWhen: "Saturday · Baraat 2:00 PM",
   blessing: "|| Shree Ganeshaya Namah ||",
   quote: "Two Hearts, One Beautiful Journey",
   thankYou: "Your Presence Will Make Our Celebration More Special",
@@ -108,6 +111,17 @@ export const wedding = {
 } as const;
 
 export type CeremonyId = (typeof wedding.events)[number]["id"];
+
+export function splitDate(date: string) {
+  const [day = "", month = "", year = ""] = date.split(" ");
+  return {
+    day,
+    month,
+    year,
+    shortMonth: month.slice(0, 3),
+    monthYear: [month, year].filter(Boolean).join(" "),
+  };
+}
 
 export function eventById(id: CeremonyId) {
   const event = wedding.events.find((item) => item.id === id);

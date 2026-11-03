@@ -1,44 +1,32 @@
 "use client";
 
-import { assets, wedding } from "@/data/wedding";
+import { wedding } from "@/data/wedding";
 import { motion } from "framer-motion";
-import { GoldRule } from "./Ornaments";
-import { Reveal } from "./Reveal";
-import { Scene } from "./Scene";
+import { FloralGarland, HeritageIntro } from "./Heritage";
 
 export function FamilySection() {
   return (
-    <Scene
-      image={assets.palaceBackdrop}
-      label="Hosts of the wedding"
-      overlay="bg-gradient-to-b from-[#2a060c]/88 via-[#720d18]/78 to-[#2a060c]/92"
-    >
-      <Reveal>
-        <p className="text-center font-display text-[0.68rem] tracking-[0.32em] text-gold">
-          {wedding.hostsLead.toUpperCase()}
-        </p>
-      </Reveal>
-      <ul className="mx-auto mt-6 max-w-sm text-center">
+    <section aria-label="Hosts of the wedding" className="heritage-section text-center">
+      <HeritageIntro kicker={wedding.hostsLead} title="The Singh family" />
+      <ul className="mx-auto mt-4 max-w-sm">
         {wedding.hosts.map((name, index) => (
           <motion.li
             key={name}
-            initial={{ opacity: 0, y: 14 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.8 }}
-            transition={{ duration: 0.55, delay: index * 0.05 }}
-            className="font-serif text-[1.65rem] leading-tight text-cream"
+            transition={{ duration: 0.45, delay: index * 0.04 }}
+            className="font-serif text-[1.45rem] leading-tight font-semibold text-[#2a1612]"
           >
             {name}
             {index < wedding.hosts.length - 1 ? (
-              <span className="mx-auto mt-2 mb-2 block h-1.5 w-1.5 rotate-45 bg-gold" aria-hidden />
+              <span className="mx-auto mt-2 mb-2 block h-1.5 w-1.5 rotate-45 bg-[#c4a15a]" aria-hidden />
             ) : null}
           </motion.li>
         ))}
       </ul>
-      <Reveal delay={0.2}>
-        <GoldRule className="mx-auto mt-4 max-w-[12rem]" />
-        <p className="mt-4 text-center font-script text-4xl text-gold-soft">{wedding.familyLine}</p>
-      </Reveal>
-    </Scene>
+      <p className="script-title mt-4 text-[#6e1830]">{wedding.familyLine}</p>
+      <FloralGarland className="mx-auto mt-4 h-9 w-full max-w-xs" />
+    </section>
   );
 }

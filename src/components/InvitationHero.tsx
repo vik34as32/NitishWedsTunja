@@ -1,53 +1,36 @@
 "use client";
 
-import { assets, wedding } from "@/data/wedding";
-import { GoldRule, LotusMark, MarigoldGarland, OrnamentFrame } from "./Ornaments";
+import { wedding } from "@/data/wedding";
+import { FloralGarland } from "./Heritage";
 import { Reveal } from "./Reveal";
-import { Scene } from "./Scene";
 
 export function InvitationHero() {
   return (
-    <Scene
-      image={assets.palaceBackdrop}
-      label="Wedding invitation"
-      priority
-      overlay="bg-gradient-to-b from-[#2a060c]/88 via-[#720d18]/82 to-[#2a060c]/92"
-    >
-      <div className="invite-card relative mx-auto w-full max-w-sm px-6 py-10 text-center">
-        <OrnamentFrame />
-        <LotusMark className="pointer-events-none absolute top-1/2 left-1/2 h-48 w-48 -translate-x-1/2 -translate-y-1/2 text-gold opacity-[0.12]" />
-        <div className="relative">
-          <MarigoldGarland className="sway mx-auto mb-4 w-full max-w-[280px]" />
-          <Reveal>
-            <p className="font-display text-[0.78rem] tracking-[0.18em] text-royal">{wedding.blessing}</p>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-4 font-serif text-xl italic text-brown/80">With blessings of our elders,</p>
-          </Reveal>
-          <Reveal delay={0.22}>
-            <h1
-              className="mt-3 font-script text-[4.4rem] leading-[0.84] text-maroon"
-              aria-label={`${wedding.groom.name} and ${wedding.bride.name}`}
-            >
-              {wedding.groom.name}
-              <span className="my-1 block font-serif text-[1.7rem] text-royal" aria-hidden>
-                ❤️
-              </span>
-              {wedding.bride.name}
-            </h1>
-          </Reveal>
-          <Reveal delay={0.34}>
-            <GoldRule className="my-4 text-royal" />
-            <p className="font-serif text-[1.35rem] leading-snug">Son of {wedding.groom.father}</p>
-            <p className="mt-1 font-serif text-[1.35rem] leading-snug">Daughter of {wedding.bride.father}</p>
-          </Reveal>
-          <Reveal delay={0.46}>
-            <p className="mt-5 font-display text-[0.66rem] tracking-[0.28em] text-royal">
-              {wedding.weddingDay.toUpperCase()}
-            </p>
-          </Reveal>
-        </div>
-      </div>
-    </Scene>
+    <section aria-label="Wedding invitation" className="heritage-section is-first text-center">
+      <FloralGarland className="mx-auto mb-3 h-12 w-full max-w-sm" />
+      <Reveal>
+        <p className="font-display text-[0.68rem] tracking-[0.28em] text-[#8d6a3a]">{wedding.blessing}</p>
+        <h1 className="script-title mt-2 text-[#6e1830]">A blessed beginning</h1>
+      </Reveal>
+      <Reveal delay={0.08}>
+        <p className="mx-auto mt-3 max-w-[19rem] font-serif text-[1.2rem] leading-snug text-[#5c4034]">
+          With hearts full of gratitude, we warmly invite you to join us as we celebrate this beautiful
+          beginning with the love, prayers, and blessings of our families.
+        </p>
+      </Reveal>
+      <Reveal delay={0.16}>
+        <p
+          className="script-title mt-4 text-[#7a1830]"
+          aria-label={`${wedding.groom.name} and ${wedding.bride.name}`}
+        >
+          {wedding.groom.name}
+          <span aria-hidden> & </span>
+          {wedding.bride.name}
+        </p>
+        <p className="mt-3 font-serif text-[1.28rem] leading-snug">Son of {wedding.groom.father}</p>
+        <p className="font-serif text-[1.28rem] leading-snug">Daughter of {wedding.bride.father}</p>
+      </Reveal>
+      <FloralGarland className="mx-auto mt-5 h-10 w-full max-w-xs" />
+    </section>
   );
 }

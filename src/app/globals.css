@@ -726,8 +726,9 @@ button {
 }
 
 .haldi-stage {
+  position: relative;
   margin: 0.95rem auto 0;
-  aspect-ratio: 360 / 230;
+  aspect-ratio: 1024 / 682;
   width: 100%;
   max-width: 22rem;
   overflow: hidden;

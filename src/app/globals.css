@@ -556,6 +556,10 @@ button {
   .spark,
   .kenburns,
   .mehndi-drift,
+  .haldi-hand-left,
+  .haldi-hand-right,
+  .haldi-spot,
+  .haldi-fall,
   .sway,
   .havan-flame,
   .tick-num,
@@ -712,6 +716,112 @@ button {
   }
   to {
     transform: scale(1.1) translate3d(-1.6%, -1.2%, 0);
+  }
+}
+
+.haldi-section {
+  background:
+    radial-gradient(circle at 50% 48%, rgba(246, 196, 49, 0.34), transparent 58%),
+    #f6efe6;
+}
+
+.haldi-stage {
+  margin: 0.95rem auto 0;
+  aspect-ratio: 360 / 230;
+  width: 100%;
+  max-width: 22rem;
+  overflow: hidden;
+  border: 3px solid #f0d48a;
+  border-radius: 1.15rem;
+  background: #f6c431;
+  box-shadow: 0 16px 34px rgba(122, 74, 8, 0.16);
+}
+
+.haldi-sign {
+  font-family: var(--font-script), cursive;
+  font-size: 24px;
+  fill: #6b3a12;
+}
+
+.haldi-hand,
+.haldi-spot,
+.haldi-fall {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.haldi-hand-left {
+  animation: haldi-dab-left 1.05s ease-in-out infinite;
+}
+
+.haldi-hand-right {
+  animation: haldi-dab-right 1.05s ease-in-out infinite;
+}
+
+.haldi-spot {
+  animation: haldi-blob 1.05s ease-in-out infinite;
+}
+
+.haldi-spot-late {
+  animation-delay: 0.12s;
+}
+
+.haldi-fall {
+  animation: haldi-fall 3.4s linear infinite;
+}
+
+.haldi-fall-late {
+  animation-delay: 1.1s;
+}
+
+.haldi-fall-later {
+  animation-delay: 2s;
+}
+
+@keyframes haldi-dab-left {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  46% {
+    transform: translate(8px, 3px);
+  }
+}
+
+@keyframes haldi-dab-right {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  46% {
+    transform: translate(-8px, 3px);
+  }
+}
+
+@keyframes haldi-blob {
+  0%,
+  34% {
+    transform: scale(0.7);
+    opacity: 0.45;
+  }
+  52%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes haldi-fall {
+  0% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(220px);
+    opacity: 0.15;
   }
 }
 

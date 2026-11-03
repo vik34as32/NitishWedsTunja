@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 520" role="img" aria-label="Nitish and Tanuja">
+  <defs>
+    <radialGradient id="disc" cx="50%" cy="46%" r="55%">
+      <stop offset="0%" stop-color="#fffdf7"/>
+      <stop offset="100%" stop-color="#f6e4c4"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="248" r="168" fill="none" stroke="#d4af65" stroke-width="3"/>
+  <circle cx="200" cy="248" r="156" fill="url(#disc)" stroke="#990f19" stroke-width="1"/>
+  <g fill="#e39b2b">
+    <circle cx="70" cy="120" r="8"/><circle cx="330" cy="120" r="8"/>
+    <circle cx="86" cy="390" r="7"/><circle cx="314" cy="390" r="7"/>
+  </g>
+  <g fill="#990f19">
+    <circle cx="70" cy="120" r="3"/><circle cx="330" cy="120" r="3"/>
+    <circle cx="86" cy="390" r="2.6"/><circle cx="314" cy="390" r="2.6"/>
+  </g>
+  <path d="M150 360c20-80 80-80 100 0v40H150Z" fill="#5c0d18"/>
+  <path d="M168 250c8 36 56 36 64 0 10 48-8 110-32 124-24-14-42-76-32-124Z" fill="#fff9ee"/>
+  <path d="M196 268v90" stroke="#d4af65" stroke-width="2"/>
+  <circle cx="196" cy="292" r="2.2" fill="#d4af65"/>
+  <circle cx="196" cy="310" r="2.2" fill="#d4af65"/>
+  <circle cx="196" cy="328" r="2.2" fill="#d4af65"/>
+  <path d="M168 300h64" stroke="#990f19" stroke-width="6"/>
+  <ellipse cx="196" cy="214" rx="20" ry="24" fill="#f1c6a8"/>
+  <path d="M174 206c18-46 44 0 44 0-8-14-36-14-44 0Z" fill="#720d18"/>
+  <path d="M196 168l5 18h-10Z" fill="#d4af65"/>
+  <path d="M186 214q4-2 8 0M202 214q4-2 8 0" fill="none" stroke="#4b3024" stroke-width="1.4"/>
+  <path d="M190 228q6 4 12 0" fill="none" stroke="#9a5a48" stroke-width="1.1"/>
+  <path d="M214 292c30-10 48 20 70 78H250Z" fill="#990f19"/>
+  <path d="M236 348h70" stroke="#d4af65" stroke-width="3"/>
+  <path d="M228 250c8 20 28 18 36 4l8 40-16 8c-6-24-22-28-28-6Z" fill="#720d18"/>
+  <path d="M236 232c16-24 40 6 46 16" fill="none" stroke="#d4af65" stroke-width="2"/>
+  <ellipse cx="246" cy="228" rx="16" ry="19" fill="#f1c6a8"/>
+  <path d="M246 206v12" stroke="#d4af65" stroke-width="1.4"/>
+  <circle cx="246" cy="220" r="2.2" fill="#d4af65"/>
+  <path d="M236 228q4-2 8 0M250 228q4-2 8 0" fill="none" stroke="#4b3024" stroke-width="1.3"/>
+  <path d="M240 240q6 4 12 0" fill="none" stroke="#9a5a48" stroke-width="1"/>
+  <path d="M232 258q14 12 28 0" fill="none" stroke="#d4af65" stroke-width="2"/>
+  <path d="M120 400c30-16 130-16 160 0" fill="none" stroke="#2f6b45" stroke-width="2"/>
+  <g fill="#e39b2b">
+    <circle cx="150" cy="398" r="7"/><circle cx="176" cy="406" r="6"/><circle cx="200" cy="398" r="7"/>
+    <circle cx="224" cy="406" r="6"/><circle cx="250" cy="398" r="7"/>
+  </g>
+</svg>

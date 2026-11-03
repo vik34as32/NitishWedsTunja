@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" role="img" aria-label="Warm haveli interior">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8a3a28"/>
+      <stop offset="55%" stop-color="#4a1a12"/>
+      <stop offset="100%" stop-color="#2a0c08"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffd27a" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="390" height="844" fill="url(#wall)"/>
+  <circle cx="195" cy="300" r="180" fill="url(#lamp)"/>
+  <path d="M70 180h250v360H70Z" fill="#3a120c" stroke="#d4af65" stroke-width="2"/>
+  <path d="M110 250c0-70 170-70 170 0v220H110Z" fill="#2a0c08" stroke="#f0d592" stroke-width="1.5"/>
+  <path d="M150 310c0-40 90-40 90 0v160h-90Z" fill="#140604"/>
+  <g fill="#d4af65" opacity="0.8">
+    <circle cx="90" cy="210" r="3"/><circle cx="300" cy="210" r="3"/>
+    <circle cx="90" cy="500" r="3"/><circle cx="300" cy="500" r="3"/>
+  </g>
+  <path d="M0 620c60-40 120-20 200-30s120 10 190 20v234H0Z" fill="#5c2418"/>
+  <path d="M40 690c40 16 80 8 120 16s80 4 110-8 70 4 80 10v80H40Z" fill="#7a3a24" opacity="0.7"/>
+  <g stroke="#d4af65" fill="none" opacity="0.35">
+    <path d="M20 80h40M20 80v40M330 80h40M370 80v40"/>
+  </g>
+  <g fill="#e39b2b">
+    <circle cx="60" cy="160" r="8"/><circle cx="86" cy="176" r="6"/><circle cx="112" cy="160" r="7"/>
+    <circle cx="278" cy="160" r="7"/><circle cx="304" cy="176" r="6"/><circle cx="330" cy="160" r="8"/>
+  </g>
+</svg>

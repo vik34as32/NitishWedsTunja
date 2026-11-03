@@ -1,0 +1,3 @@
+Optional cinematic loop. This path is reserved in src/data/wedding.ts as assets.video.
+Drop a file at public/videos/wedding-reel.mp4 when you want a reel added later.
+The invitation does not require this file.

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" role="img" aria-label="Mehndi garden of marigolds">
+  <defs>
+    <linearGradient id="cloth" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#123528"/>
+      <stop offset="50%" stop-color="#1f5a3c"/>
+      <stop offset="100%" stop-color="#0e241c"/>
+    </linearGradient>
+    <pattern id="paisley" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M23 8c8 8 8 16 0 22-8-6-8-14 0-22Z" fill="none" stroke="#d4af65" stroke-width="0.8" opacity="0.45"/>
+      <circle cx="23" cy="18" r="1.4" fill="#e39b2b" opacity="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="390" height="844" fill="url(#cloth)"/>
+  <rect width="390" height="844" fill="url(#paisley)"/>
+  <path d="M0 0c80 80 40 160 0 220V0Z" fill="#990f19" opacity="0.35"/>
+  <path d="M390 0c-80 90-30 170 0 240V0Z" fill="#720d18" opacity="0.4"/>
+  <path d="M-10 700c80-80 160-40 220-70s120-10 190 30v184H-10Z" fill="#0c2a1e"/>
+  <g fill="#e39b2b">
+    <circle cx="48" cy="120" r="14"/><circle cx="86" cy="150" r="10"/><circle cx="40" cy="180" r="8"/>
+    <circle cx="330" cy="140" r="13"/><circle cx="300" cy="180" r="9"/><circle cx="352" cy="200" r="8"/>
+    <circle cx="70" cy="640" r="12"/><circle cx="120" cy="670" r="9"/>
+    <circle cx="300" cy="650" r="11"/><circle cx="250" cy="690" r="8"/>
+  </g>
+  <g fill="#990f19">
+    <circle cx="48" cy="120" r="5"/><circle cx="330" cy="140" r="4.5"/><circle cx="70" cy="640" r="4"/>
+  </g>
+  <path d="M30 360c40-20 70 10 110-8s70 16 90-4 60 8 90 6" fill="none" stroke="#2f6b45" stroke-width="3"/>
+  <circle cx="195" cy="420" r="70" fill="none" stroke="#d4af65" stroke-width="1.2" opacity="0.55"/>
+  <circle cx="195" cy="420" r="46" fill="none" stroke="#f2c14e" stroke-width="0.8" opacity="0.5"/>
+</svg>

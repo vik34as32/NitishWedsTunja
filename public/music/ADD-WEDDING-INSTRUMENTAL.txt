@@ -1,0 +1,6 @@
+Place a royalty-free wedding instrumental at this exact path:
+
+public/music/wedding-instrumental.mp3
+
+The player loops that file after the guest opens the invitation.
+If the file is missing, a soft ceremonial drone plays instead.

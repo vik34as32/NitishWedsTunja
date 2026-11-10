@@ -1,40 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Cinzel, Cormorant_Garamond, Great_Vibes, Noto_Sans_Devanagari } from "next/font/google";
-import "./globals.css";
+import Script from "next/script";
 
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-cinzel",
-});
-
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-  variable: "--font-cormorant",
-});
-
-const script = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-great-vibes",
-});
-
-const devanagari = Noto_Sans_Devanagari({
-  subsets: ["devanagari"],
-  weight: ["500", "700"],
-  variable: "--font-devanagari",
-});
+const description =
+  "Together with their families, Nitish & Tanuja cordially invite you to celebrate their wedding celebrations on 21 November 2026 in Siwan, Bihar.";
 
 export const metadata: Metadata = {
-  title: "Nitish & Tanuja | Shubh Vivah",
-  description:
-    "You are cordially invited to the wedding of Nitish and Tanuja on Saturday, 21 November 2026.",
+  title: "Nitish & Tanuja — Wedding Invitation",
+  description,
   openGraph: {
-    title: "Nitish & Tanuja | Shubh Vivah",
-    description: "Join us on 21 November 2026 as Nitish and Tanuja begin their forever.",
     type: "website",
+    siteName: "Nitish & Tanuja Wedding",
+    title: "Nitish & Tanuja — Wedding Invitation",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nitish & Tanuja — Wedding Invitation",
+    description,
   },
 };
 
@@ -42,19 +24,32 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  themeColor: "#4c1220",
+  themeColor: "#FDF8EC",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${cinzel.variable} ${cormorant.variable} ${script.variable} ${devanagari.variable} scroll-lock antialiased`}
-    >
-      <body className="bg-[#f6efe6] text-[#3c241c]">
-        <noscript>
-          <style>{`html,body{height:auto !important;overflow:auto !important}.boot-overlay,.welcome-overlay{display:none !important}.await-reveal,[data-reveal]{opacity:1 !important;transform:none !important}`}</style>
-        </noscript>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Italianno&family=Montserrat:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/Assets/bg_images/bg_hero_mobile.webp"
+        />
+        <link rel="stylesheet" href="/style.css" />
+      </head>
+      <body className="scroll-locked">
+        <Script id="restore-scroll" strategy="beforeInteractive">
+          {`if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+window.scrollTo(0, 0);
+if (window.location.hash) history.replaceState(null, "", window.location.pathname + window.location.search);`}
+        </Script>
         {children}
       </body>
     </html>

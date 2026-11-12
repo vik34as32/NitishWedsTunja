@@ -28,7 +28,7 @@ const CONFIG = {
     parents: "Son of Sh. Arun Singh",
     tagline: "Software Engineer",
     bio: "A visionary designer drawn to royal arches and soulful journeys, ready for life's greatest collaboration.",
-    photo: "/Assets/svg/groom.svg"
+    photo: "/Assets/groom-portrait.jpg"
   },
   bride: {
     name: "Tanuja",
@@ -36,7 +36,7 @@ const CONFIG = {
     parents: "Daughter of Sh. Narendra Singh",
     tagline: "Software Engineer",
     bio: "A graceful soul who brings warmth, music, and vibrant colors to every heart she touches.",
-    photo: "/Assets/svg/bride.svg"
+    photo: "/Assets/bride-portrait.jpg"
   },
 
   // Wedding Date & Time

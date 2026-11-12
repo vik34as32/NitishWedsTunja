@@ -1257,21 +1257,23 @@ body.scroll-locked {
 .couple-arch-frame {
   position: relative;
   flex-shrink: 0;
-  width: 31cqw;
-  height: 40cqw;
-  max-width: 132px;
-  max-height: 162px;
-  border-radius: 50% 50% 14px 14px;
+  width: 52cqw;
+  height: 58cqw;
+  max-width: 220px;
+  max-height: 246px;
+  border-radius: 50% 50% 16px 16px;
   overflow: hidden;
   border: 2px solid var(--gold-bright);
   box-shadow: 0 8px 22px rgba(74, 46, 53, 0.16);
   margin-bottom: 4px;
+  background: #1a0e12;
 }
 
 .couple-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 12%;
   display: block;
 }
 

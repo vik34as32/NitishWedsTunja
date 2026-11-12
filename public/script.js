@@ -118,11 +118,11 @@ const CONFIG = {
 
   // Gallery Photos
   gallery: [
-    { src: "/Assets/svg/scene1.svg", caption: "Laughter & Grace" },
-    { src: "/Assets/svg/scene2.svg", caption: "Under The Mandap" },
-    { src: "/Assets/svg/scene3.svg", caption: "Shared Glances" },
-    { src: "/Assets/svg/scene4.svg", caption: "Golden Hour Glow" },
-    { src: "/Assets/svg/scene5.svg", caption: "Forever in Love" }
+    { src: "/Assets/moments/together.png", caption: "Together As One" },
+    { src: "/Assets/moments/welcome.jpg", caption: "The Welcome" },
+    { src: "/Assets/moments/doli.jpg", caption: "Doli Journey" },
+    { src: "/Assets/moments/sindoor.jpg", caption: "Sacred Sindoor" },
+    { src: "/Assets/moments/varmala.jpg", caption: "The Varmala" }
   ]
 };
 
